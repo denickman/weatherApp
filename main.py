@@ -1,12 +1,11 @@
 from flask import Flask, render_template
-
+import pandas as pd
 
 '''
 Папка templates — обязательна
 Да, это стандартное условие Flask.
 Flask ищет HTML файлы по умолчанию в папке templates/:
 '''
-
 
 '''
 # Flask('Website') = создаёшь новое приложение Flask
@@ -17,7 +16,6 @@ Flask ищет HTML файлы по умолчанию в папке templates/:
 - Маршрутизировать URL
 '''
 app = Flask(__name__)
-
 
 '''
 Когда кто-то откроет:
@@ -38,19 +36,22 @@ Flask видит /home
 def home_page():     # ← ФУНКЦИЯ
     return render_template('home.html') # обязательно должна быть в папке templates
 
-
 @app.route('/api/v1/<station>/<date>')
 def about_page(station, date):
-    # df = pandas.read_csv('data/' + station + '/' + date + '.csv')
-    # temperature = df.station(date)
 
-    temperature = 23
-    # return str(temperature)  #render_template('about.html')
-    return {
-        'station': station,
-        'date': date,
-        'temperature': temperature
-    }
+    filename = 'data_small/TG_STAID' + str(station).zfill(6) + '.txt'
+    df = pd.read_csv(filename, skiprows=20, parse_dates=['    DATE']) # zfill добавляет нули к station
+    temperature = df.loc[df['    DATE'] == date]['   TG'].squeeze() / 10
+
+    # hardcoded values
+    # temperature = 23
+    # return {
+    #     'station': station,
+    #     'date': date,
+    #     'temperature': temperature
+    # }
+
+    return str(temperature)  #render_template('about.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
