@@ -1,0 +1,361 @@
+PYTHON
+=======================================================
+
+Matplotlib — это библиотека для рисования графиков и диаграмм
+python3 -m pip install matplotlib
+
+
+
+===============================================================
+pip install -r requeirements.txt
+====================================================================================
+Установка юпитера
+python3 -m pip install jupyterlab
+
+Затем cd Downloads и запускаем команду
+python3 -m jupyter lab
+
+Дальше выбирает note (первую иконку)
+Пишем команды
+
+Запускаем их cmd+enter
+Esc - убрать фокус на ячейке
+
+
+Чтобы остановить Юпитера/ закрываем терминал
+
+После закрытия и открытия можешь использовать предыдущий документ с которым ты работал
+
+Вставить ячейку сверху - выбрать ту где хочешь разместить новую сверху и нажать А - вставка вверх  / B - вставка вниз
+Нажав на М - меняешь ячейку на markdown cell / # - можешь оставлять коменты
+
+
+
+
+============================================
+
+
+
+239 видео из курса mega course python
+Python anywhere // site host / run / code python in cloud  (by anaconda)
+https://www.pythonanywhere.com
+
+
+Ключи gemini google keys
+https://aistudio.google.com/app/api-keys
+
+
+
+============================================
+
+langchain
+langchain-google-genai
+python-dotenv
+requests
+
+============ requirements.txt =================
+
+Правильный способ:
+Каждому проекту — свой venv:
+
+
+bash
+# Проект 1
+cd project1
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# Проект 2 (в другой папке)
+cd project2
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+Теперь:
+* Project 1 имеет свой набор пакетов
+* Project 2 имеет свой набор пакетов
+* Они не конфликтуют
+
+
+============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Потом
+https://www.udemy.com/course/rest-api-fastapi-python/?couponCode=MT260622G1
+
+
+✅ Обязательно пройти
+App 3 — AI News Email (LangChain + LLM)
+
+
+What We Will Build
+How do LLMs Connect to Apps
+Setting up Langchain and an LLM Model
+Using LLMs with Python Example
+LLM Token Limits and Prices
+Getting AI News Summary and Analysis
+Storing Sensitive Data Securely
+Почему: это прямо твоя тема — LangChain, вызовы к AI моделям, работа с API ключами. Аналог твоего anthropicApiKey в Firebase.
+
+
+App 4 — AI Agent с LangChain
+
+
+Building an AI Agent - Gemini Model
+Building an AI Agent that Uses Local AI Models
+Adding the Web Interface
+Implementing Continuous Conversations
+Adding Agent Web Search Capability
+Почему: AI агенты — это именно то что требуют в вакансиях Middle AI Python Developer.
+
+App 5/6 — Flask REST API
+
+
+Build a Website with Flask
+Build a REST API
+Running Multiple Apps
+API that Returns Weather Temperature Data
+Почему: Flask это упрощённый FastAPI. Поняв Flask за день — FastAPI освоишь за два.
+
+
+
+App 10 — SQL Database
+
+
+SQL Databases (теория)
+Select, Add, and Delete SQL Data
+Storing the App Data in an SQL Database
+Почему: PostgreSQL везде в вакансиях, это базовые знания которые нужны.
+
+App 11 — ООП архитектура
+
+
+Classes and Object Oriented Programming
+Class init and self
+Planning the App in OOP Style
+Instance Variables Vs. Class Variables
+Magic Methods
+Abstract Classes
+Почему: ООП в Python отличается от Swift синтаксически, надо привыкнуть.
+
+
+
+
+
+
+
+
+
+Что пропустить в FastAPI курсе
+===========================
+
+Прыгай сразу на: "FastAPI Overview" — это начало реального материала.
+
+✅ Смотреть всё подряд начиная отсюда
+Блок 1 — FastAPI основы
+* FastAPI Overview
+* Virtual Environments
+* Books Project (GET, POST, PUT, DELETE)
+* Path Parameters, Query Parameters
+* Pydantic + Data Validation
+* Status Codes, HTTP Exceptions
+Блок 2 — База данных (самый важный для тебя)
+* SQL Database Introduction
+* SQLAlchemy ORM
+* Database Tables / Models
+* CRUD операции с БД
+* PostgreSQL подключение
+* Alembic миграции — очень важно, везде в вакансиях
+Блок 3 — Аутентификация (прямой аналог твоего Firebase Auth)
+* Authentication & Authorization
+* JWT токены — encode/decode
+* Password Hashing с BCrypt
+* Routers для масштабирования
+* Foreign Keys, User relationships
+Блок 4 — Тесты
+* pytest Introduction
+* FastAPI тесты — все части
+* Setup Dependencies
+Блок 5 — Деплой
+* PostgreSQL Production
+* Render деплой
+
+❌ Пропустить в конце
+* Full Stack секция с Jinja templates — HTML шаблоны тебе не нужны, ты делаешь API
+* Legacy Video Content — устаревший материал, явно помечен
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mega Course (10 дней быстро)
+         ↓
+FastAPI документация (1-2 недели)
+         ↓
+PostgreSQL + SQLAlchemy (1 неделя)
+         ↓
+Docker (3-4 дня)
+         ↓
+Переписать Notae backend на Python/FastAPI
+         ↓
+Собеседования
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Обязательно почти везде:
+* Python (ООП, asyncio, типизация)
+* FastAPI или Django
+* PostgreSQL + SQLAlchemy
+* REST API
+* Git
+* Docker
+* Linux basics
+
+Часто встречается:
+* Redis, RabbitMQ / Celery
+* AWS (S3, EC2)
+* MongoDB
+* pytest (тесты)
+* LLM / AI интеграции (растущий тренд)
+*
+
+
+Python + FastAPI → Docker + PostgreSQL → LangChain + RAG → первая работа
+
+
+Учитывая твой уровень, это займёт 2–4 месяца плотной практики:
+Неделя 1–2: Python синтаксис + asyncio (для тебя как Swift разработчика это быстро)
+Неделя 3–4: FastAPI — аналог твоих URLSession/Alamofire но на сервере
+Месяц 2: PostgreSQL + SQLAlchemy + Docker
+Месяц 3: Сделать 2 реальных проекта + LangChain/OpenAI API
+Месяц 4: pytest, Redis, подготовка к собеседованиям
+
+
+
+Что реально делает Generative AI Engineer
+Берёт готовую модель (ChatGPT, Claude, Gemini) и строит вокруг неё продукт:
+* Подключает LLM к базе данных компании
+* Строит RAG — чтобы модель отвечала на основе своих документов
+* Делает AI агентов которые выполняют задачи
+* Пишет backend на FastAPI
+========================================================================================================================
+
+
+
+
+Про твой код — это очень сильный проект для собеса
+Я прочитал твой index.js и это не простой бэкенд. Вот что там реализовано:
+Что уже есть:
+* Интеграция с Claude Vision API (Anthropic)
+* Интеграция с OpenAI Whisper (speech-to-text)
+* Система подписок через Apple StoreKit + JWS верификация
+* Многоуровневая система лимитов (free/plus/pro)
+* iCloud синхронизация между устройствами
+* Транзакции Firestore для атомарных операций
+* Система очистки устаревших пользователей
+* App Store Server Notifications v2
+Это production-level код, не учебный проект.
+
+Стоит ли переписать на Python?
+Да, однозначно стоит — и вот почему это идеальный проект для собеса:
+Переписав этот код на Python/FastAPI ты продемонстрируешь:
+* Работу с Anthropic Claude API — прямо в вакансиях требуют
+* Работу с OpenAI Whisper API
+* Систему аутентификации и авторизации
+* Работу с базой данных (можно заменить Firestore на PostgreSQL)
+* Бизнес-логику с подписками и лимитами
+* Транзакции и атомарные операции
+Это не мало — это очень много для первого собеса.
+
+Как переписать — конкретный план
+Firebase Functions → FastAPI эндпоинты:
+
+
+callClaudeVision    → POST /api/vision/scan
+callWhisperProxy    → POST /api/voice/transcribe
+getUserUsage        → GET  /api/user/usage
+verifySubscription  → POST /api/subscription/verify
+Firestore → PostgreSQL (это покажет знание SQL)
+Firebase Auth → JWT токены (стандартная практика)
+Это займёт 3-4 недели и будет лучшим портфолио проектом чем любой учебный todo-list.
+============================================================================================================
+
+
+✅ Python основы (2-3 недели)
+✅ FastAPI (2 недели)
+✅ PostgreSQL (1 неделя)
+✅ Docker (1 неделя)
+✅ Notae API (production-ready) (4-5 недель)
+✅ GitHub с примерами
+✅ 1-2 маленьких проекта (видео-скрипт, скрейпер, что-то простое)
+
+
+================================================
+
+Критичный вывод
+Все вакансии требуют ОПЫТА (1-3 года), но не требуют ЗНАНИЙ 15 технологий.
+Тебе нужно:
+1. Выучить FastAPI хорошо (70% вакансий)
+2. PostgreSQL твёрдо (100% вакансий)
+3. Docker базово (50% вакансий)
+4. Сделать Notae API (твоё портфолио)
+5. К 1 октября рассылать резюме
+Остальное — в процессе работы.
+
+
+
+
+
+============================================================
+
+Что добавить после старта работы
+Месяц 1-2 на работе:
+* async/await (asyncio)
+* Redis / Celery
+* Tests (pytest)
+Месяц 3-6:
+* AWS
+* Docker Compose
+* Linux комфортно
+Месяц 6+:
+* AI/LLM (если интересно)
+* Microservices (если надо)
