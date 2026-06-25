@@ -17,6 +17,7 @@ Flask ищет HTML файлы по умолчанию в папке templates/:
 '''
 app = Flask(__name__)
 
+
 '''
 Когда кто-то откроет:
  @app.route('/home') - "слушай URL /home"
@@ -32,9 +33,23 @@ Flask видит /home
 Вызывает функцию
 '''
 
-@app.route('/')          # ← ДЕКОРАТОР
+
+
+
+
+
+
+
+
+
+
+stations = pd.read_csv('data_small/stations.txt', skiprows=17)
+stations = stations[['STAID', 'STANAME                                 ']]
+
+
+@app.route('/')      # ← ДЕКОРАТОР
 def home_page():     # ← ФУНКЦИЯ
-    return render_template('home.html') # обязательно должна быть в папке templates
+    return render_template('home.html', data=stations.to_html()) # home.html обязательно должна быть в папке templates
 
 @app.route('/api/v1/<station>/<date>')
 def about_page(station, date):
